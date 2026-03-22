@@ -79,30 +79,28 @@ body {
     transform: translateY(0);
 }
 
-/* LEFT SIDE (title + socials) */
-.left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
 /* TITLE */
 .title {
     font-size: 14px;
 }
 
-/* SOCIAL BUTTONS */
+/* RIGHT SIDE */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* SOCIALS */
 .socials {
     display: flex;
     gap: 6px;
 }
 
-.social-btn img {
+/* SOCIAL BUTTON */
+.social-btn {
     width: 32px;
     height: 32px;
-    object-fit: contain;
-    display: block;
-}
 
     display: flex;
     align-items: center;
@@ -114,12 +112,16 @@ body {
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(6px);
 
-    font-size: 12px; /* потом заменишь на иконки */
-    color: white;
-
     transition: 0.3s;
 }
 
+.social-btn img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* hover */
 .social-btn:hover {
     background: rgba(255,255,255,0.3);
 }
@@ -172,27 +174,23 @@ body {
         <img src="images/Sakura_Clean.png" alt="">
         <div class="overlay">
 
-            <div class="left">
-                <div class="title">Sakura Set</div>
+            <div class="title">Sakura Set</div>
 
+            <div class="right">
                 <div class="socials">
-                  
                     <a href="#" class="social-btn">
-                        <img src="icons/ig.svg" width="14">
-                 </a>
-
+                        <img src="icons/ig.svg">
+                    </a>
                     <a href="#" class="social-btn">
-                        <img src="icons/ig.png" width="14">
-                 </a>
-
+                        <img src="icons/flickr.svg">
+                    </a>
                     <a href="#" class="social-btn">
-                        <img src="icons/ig.png" width="14">
-                 </a>
-                    
+                        <img src="icons/yt.svg">
+                    </a>
                 </div>
-            </div>
 
-            <a href="#" class="btn">Open</a>
+                <a href="#" class="btn">Open</a>
+            </div>
 
         </div>
     </div>
@@ -201,17 +199,17 @@ body {
         <img src="images/Panda_Clean.png" alt="">
         <div class="overlay">
 
-            <div class="left">
-                <div class="title">Panda Set</div>
+            <div class="title">Panda Set</div>
 
+            <div class="right">
                 <div class="socials">
                     <a href="#" class="social-btn">I</a>
                     <a href="#" class="social-btn">F</a>
                     <a href="#" class="social-btn">X</a>
                 </div>
-            </div>
 
-            <a href="#" class="btn">Open</a>
+                <a href="#" class="btn">Open</a>
+            </div>
 
         </div>
     </div>
@@ -220,17 +218,17 @@ body {
         <img src="images/G200_Clean.png" alt="">
         <div class="overlay">
 
-            <div class="left">
-                <div class="title">G200 Set</div>
+            <div class="title">G200 Set</div>
 
+            <div class="right">
                 <div class="socials">
                     <a href="#" class="social-btn">I</a>
                     <a href="#" class="social-btn">F</a>
                     <a href="#" class="social-btn">X</a>
                 </div>
-            </div>
 
-            <a href="#" class="btn">Open</a>
+                <a href="#" class="btn">Open</a>
+            </div>
 
         </div>
     </div>
