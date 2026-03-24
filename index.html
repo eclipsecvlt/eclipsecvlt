@@ -227,10 +227,18 @@ body {
                     </a>
                 </div>
 
-                <a href="https://www.instagram.com/e_c_l_i_p_s_e_d_e_s_i_g_n_e_r/reel/DRijKlrjhR9/" class="btn" onclick="gtag('event', 'click_open', {
+                <a href="https://www.instagram.com/e_c_l_i_p_s_e_d_e_s_i_g_n_e_r/reel/DRijKlrjhR9/" 
+class="btn"
+onclick="event.preventDefault(); 
+gtag('event', 'click_open', {
   'event_category': 'cvlt',
   'event_label': 'Sarma Set'
-})">Open</a>
+});
+setTimeout(() => {
+  window.location.href=this.href;
+}, 200);">
+Open
+</a>
             </div>
 
         </div>
