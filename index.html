@@ -150,9 +150,20 @@ body {
 }
 
 /* MOBILE */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .banner {
         height: 200px;
+    }
+
+    .overlay {
+        opacity: 0;
+        transform: translateY(30px);
+        pointer-events: none;
+    }
+    .overlay.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 
     .gallery {
@@ -1054,5 +1065,45 @@ body {
 
 </div>
 
+<!--NEW BLOCK-->
+
+    
+<script>
+
+if (window.innerWidth <= 768) {
+
+    const cards = document.querySelectorAll('.card');
+
+    function updateCards() {
+
+        const triggerCenter = window.innerHeight * 0.55;
+
+        cards.forEach(card => {
+
+            const rect = card.getBoundingClientRect();
+            const overlay = card.querySelector('.overlay');
+
+            const cardCenter = rect.top + rect.height / 2;
+
+            const distance = Math.abs(triggerCenter - cardCenter);
+
+            if (distance < 250) {
+                overlay.classList.add('visible');
+            } else {
+                overlay.classList.remove('visible');
+            }
+
+        });
+    }
+
+    window.addEventListener('scroll', updateCards);
+    window.addEventListener('load', updateCards);
+
+}
+
+</script>
+
+<!--NEW BLOCK-->
+    
 </body>
 </html>
