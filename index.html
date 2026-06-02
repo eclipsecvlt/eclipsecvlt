@@ -221,15 +221,19 @@ body {
 
             <div class="right">
                 <div class="socials">
-                    <a href="https://www.instagram.com/p/DYp5qTGAThq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="social-btn">
+                    <a href="https://www.instagram.com/p/DYp5qTGAThq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="social-btn"
+                        onclick="trackClick('Instagram Click','Sakura Set')">
                         <img src="icons/ig.svg">
                     </a>
-                    <a href="https://www.flickr.com/photos/200051390@N03/55285744662/in/dateposted-public" class="social-btn">
+                    <a href="https://www.flickr.com/photos/200051390@N03/55285744662/in/dateposted-public" class="social-btn"
+                        onclick="trackClick('Flickr Click','Sakura Set')">
                         <img src="icons/flickr.svg">
+                        
                     </a>
                 </div>
 
-                <a href="href=javascript:void(0)" class="btn">Shop N/A</a>
+                <a href="href=javascript:void(0)" class="btn"
+                    onclick="trackClick('Open Click','Sakura Set')">Shop N/A</a>
             </div>
 
         </div>
@@ -1110,6 +1114,26 @@ if (window.innerWidth <= 768) {
 </script>
 
 <!--NEW BLOCK-->
+
+<script>
+
+function trackClick(eventName, setName) {
+
+    fetch(
+        "ТУТ_ТВОЙ_APPS_SCRIPT_URL",
+        {
+            method: "POST",
+            body: JSON.stringify({
+                event: eventName,
+                set: setName
+            })
+        }
+    );
+
+}
+
+</script>
+
     
 </body>
 </html>
